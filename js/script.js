@@ -84,6 +84,7 @@ $(document).ready(function(){
        nav: false,
        loop: true,
        dots: true,
+       
        animateOut: 'fadeOut',
        dotsContainer: '#carousel-custom-dots'
    });
