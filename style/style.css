@@ -427,6 +427,37 @@ img {
 	padding: 3rem 0;
 	background: black;
 }
+.footer-item {
+	margin-bottom: 1.5rem;
+}
+.footer-item h3 {
+	font-size: 18px;
+	color: var(--primary);
+	letter-spacing: 0.36px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-bottom: 1.5rem;
+}
+.footer-item ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.footer-item ul li {
+	line-height: 1.8;
+}
+.footer-item ul li a {
+	color: var(--grey);
+}
+.footer-text p {
+	color: var(--grey);
+	letter-spacing: 1.12px;
+	font-size: 14px;
+	font-family: var(--openSans);
+}
+.footer-text img {
+	filter: invert(70%) sepia(14%) saturate(253%) hue-rotate(165deg) brightness(81%) contrast(90%);
+}
 @media (min-width: 1200px) {
 	.homepage__slider--item .homepage__slider--image {
 		height: 100vh;

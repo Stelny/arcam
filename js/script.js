@@ -93,5 +93,11 @@ $(document).ready(function(){
     homepage__slider.trigger('to.owl.carousel', [$(this).index(), 300]);
   });
 
+  $("#scroll-down").click(function (){
+    document.querySelector('#product').scrollIntoView({
+      behavior: 'smooth'
+  });
+});
+
 
 })
