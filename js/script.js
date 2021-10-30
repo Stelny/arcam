@@ -110,6 +110,11 @@ $(document).ready(function(){
       detail__slider.trigger('prev.owl.carousel');
     })
 
+    $(".detail-meta-more-item").click(() => {
+      $(".detail-meta-more").toggleClass("active")
+      $(".detail-meta ul").toggleClass("active")
+    })
+
    $('.owl-dot').click(function () {
     detail__slider.trigger('to.owl.carousel', [$(this).index(), 300]);
   });

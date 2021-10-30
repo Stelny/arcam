@@ -385,6 +385,9 @@ img {
 	height: 100%;
 	flex-direction: column;
 }
+.default-heading.black-border h2::after {
+	background: black;
+}
 .default-heading span {
 	color: var(--primary);
 	font-size: 13px;
@@ -700,6 +703,191 @@ img {
 .owl-dots {
 	justify-content: center;
 }
+.rewards {
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+.right-detail, .left-detail {
+	cursor: pointer;
+}
+.reward-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 2rem;
+}
+.reward-item::before {
+	content: url(../icons/stats-awards.svg);
+}
+.reward-item .year {
+	color: var(--primary);
+	font-size: 32px;
+	font-family: var(--openSans);
+	font-weight: 600;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+.reward-item .year::after {
+	content: "";
+	width: 80px;
+	height: 3px;
+	background: var(--primary);
+	text-transform: uppercase;
+}
+.reward-item .name {
+	color: black;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 0.36px;
+	font-weight: 600;
+} 
+.reward-item-content {
+	text-align: center;
+	font-family: var(--openSans);
+}
+.download {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 0;
+	background: var(--primary);
+}
+.download p {
+	font-size: 20px;
+	color: white;
+	font-weight: 300;
+	text-align: center;
+}
+.download-content {
+	max-width: 730px;
+	margin: auto;
+}
+.download-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.download-wrap-item {
+	margin: 0.5rem;
+}
+.detail-heading {
+	text-align: center;
+}
+.detail-heading-blue {
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 1.04px;
+	color: var(--primary);
+}
+.detail-heading h1 {
+	font-size: 32px;
+	letter-spacing: 2.56px;
+	font-weight: var(--openSans);
+	font-weight: 600;
+}
+.detail-text-info p {
+	font-family: var(--openSans);
+	font-size: 14px;
+	color: black;
+}
+.detail-text-info p.head {
+	font-size: 18px;
+}
+.detail-text {
+	margin-top: 3rem;
+}
+.detail-text-info {
+	margin-top: 2rem;
+}
+.detail-meta ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.detail-meta ul li {
+	padding: 0.75rem 0;
+	border-bottom: 1px solid #C7CCD0;
+	font-size: 14px;
+	font-family: var(--openSans);
+	letter-spacing: 0px;
+}
+.detail-meta ul li  { display: none; } /* Hide all */
+.detail-meta ul li:nth-child(-n+5) { display: list-item; }
+.detail-meta ul.active li {
+	display: list-item;
+}
+.detail-meta ul li::before {
+	content: "\2022";
+	color: var(--primary);
+	font-weight: bold;
+	display: inline-block; 
+	width: 2em;
+	padding-left: -2em;
+}
+.detail-meta h3 {
+	font-size: 18px;
+	letter-spacing: 0.36px;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.5rem;
+}
+.detail-meta h3::after {
+	content: "";
+	background: var(--primary);
+	width: 100px;
+	height: 3px;
+	margin-top: 0.5rem;
+}
+.detail-h {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+.back-arrow {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 14px;
+	color: black;
+	font-family: var(--openSans);
+}
+.back-arrow:hover {
+	color: #8A959E;
+	text-decoration: none;
+}
+.detail-meta-more-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.detail-meta-more-item span {
+	margin-right: 1rem;
+	padding: 1rem 0;
+}
+.detail-meta-more .detail-meta-more-less {
+	display: none;
+}
+.detail-meta-more.active .detail-meta-more-more {
+	display: none;
+}
+.detail-meta-more.active .detail-meta-more-less {
+	display: flex;
+}
+.detail-meta-more-less img {
+	transform: rotate(180deg);
+}
 @media (min-width: 1200px) {
 	.homepage__slider--item .homepage__slider--image {
 		height: 100vh;
@@ -762,9 +950,32 @@ img {
 		margin-top: -35px;
 		padding-top: 35px;
 	}
+	
  } 
  @media (max-width: 767px) {
-	
+	.detail-image-content {
+		height: 275px;
+	}
+	.back-arrow {
+		position: unset;
+		top: unset;
+		right: unset;
+		text-align: center;
+		order: 1;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+	.detail-h {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.detail-heading {
+		order: 2;
+	}
+	.detail-content {
+		padding: 3rem 0;
+	}
 } 
  @media (max-width: 567px) { 
 	
