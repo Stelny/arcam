@@ -93,6 +93,27 @@ $(document).ready(function(){
     homepage__slider.trigger('to.owl.carousel', [$(this).index(), 300]);
   });
 
+  const detail__slider = $(".detail__slider");
+  detail__slider.owlCarousel({
+       items: 1,
+       nav: false,
+       loop: true,
+       dots: true,
+       animateOut: 'fadeOut',
+       dotsContainer: '#carousel-custom-dots'
+   });
+
+    $('.right-detail').click(function() {
+      detail__slider.trigger('next.owl.carousel');
+    })
+    $('.left-detail').click(function() {
+      detail__slider.trigger('prev.owl.carousel');
+    })
+
+   $('.owl-dot').click(function () {
+    detail__slider.trigger('to.owl.carousel', [$(this).index(), 300]);
+  });
+
   $("#scroll-down").click(function (){
     document.querySelector('#product').scrollIntoView({
       behavior: 'smooth'
