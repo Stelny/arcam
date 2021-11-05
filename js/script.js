@@ -81,10 +81,9 @@ $(document).ready(function(){
   const homepage__slider = $(".homepage__slider");
   homepage__slider.owlCarousel({
        items: 1,
-       nav: false,
+       nav: true,
        loop: true,
        dots: true,
-       
        animateOut: 'fadeOut',
        dotsContainer: '#carousel-custom-dots'
    });
@@ -99,7 +98,6 @@ $(document).ready(function(){
        nav: false,
        loop: true,
        dots: true,
-       animateOut: 'fadeOut',
        dotsContainer: '#carousel-custom-dots'
    });
 
@@ -123,7 +121,11 @@ $(document).ready(function(){
     document.querySelector('#product').scrollIntoView({
       behavior: 'smooth'
   });
+
+
 });
+
+AOS.init();
 
 
 })
